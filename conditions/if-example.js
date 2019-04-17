@@ -1,4 +1,4 @@
-const readline = require('readline');
+const readline = require("readline");
 const chalk = require("chalk");
 
 const rl = readline.createInterface({
@@ -7,11 +7,14 @@ const rl = readline.createInterface({
 });
 
 console.clear();
-rl.question(chalk.red('What day is it today? '), (today) => {
-
-    if(today == "monday"){
-        console.log("hello, today is Monday!");
-    }
+rl.question(chalk.yellow("What day is it today? "), today => {
+  if (today == "monday") {
+    console.log("");
+    console.log(chalk.green("hello, today is Monday!"));
+  } else {
+    console.log("");
+    console.log(chalk.red("Oopps, today is not monday"));
+  }
 
   rl.close();
 });
